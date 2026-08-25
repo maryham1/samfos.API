@@ -16,7 +16,7 @@ app.use(
     origin: "https://samfos.vercel.app/" || "http://localhost:3000",
   }),
 );
-
+//contact
 app.use(express.json());
 
 app.use("/contact", contactRoutes);
