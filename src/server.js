@@ -1,4 +1,4 @@
-import express from "express";
+import express, { json } from "express";
 import cors from "cors";
 import { config } from "dotenv";
 
@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://samfos.vercel.app/" || "http://localhost:3000",
+    origin: "https://samfos.vercel.app/",
   }),
 );
 //contact
@@ -21,7 +21,11 @@ app.use(express.json());
 
 app.use("/contact", contactRoutes);
 
-console.log("hello world");
+app.get("/samfos", (res, req) => {
+  json({
+    message: "hello samfos",
+  });
+});
 app.listen(PORT, () => {
   console.log("server start running");
 });
