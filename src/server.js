@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://samfos.vercel.app/",
+    origin: "https://samfos.vercel.app",
   }),
 );
 //contact
