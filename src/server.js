@@ -21,8 +21,8 @@ app.use(express.json());
 
 app.use("/contact", contactRoutes);
 
-app.get("/samfos", (res, req) => {
-  json({
+app.get("/samfos", (req, res) => {
+  res.json({
     message: "hello samfos",
   });
 });
